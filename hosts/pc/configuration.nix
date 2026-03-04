@@ -62,6 +62,7 @@
     hyprlock
     wofi
     firefox
+    google-chrome
     hysteria
     bun
     nodejs
