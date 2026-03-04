@@ -1,0 +1,94 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 86,
+  "spacing": 20,
+  "margin-top": 20,
+  "margin-left": 24,
+  "margin-right": 24,
+
+  "modules-left": [
+    "hyprland/workspaces",
+    "hyprland/window"
+  ],
+  "modules-center": [
+    "clock"
+  ],
+  "modules-right": [
+    "custom/network",
+    "custom/bluetooth",
+    "custom/gpu",
+    "cpu",
+    "memory",
+    "pulseaudio",
+    "tray"
+  ],
+
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "format": "{name}"
+  },
+
+  "hyprland/window": {
+    "max-length": 90,
+    "separate-outputs": true
+  },
+
+  "clock": {
+    "interval": 1,
+    "format": "{:%a, %d %b  %H:%M}"
+  },
+
+  "custom/network": {
+    "exec": "~/.config/waybar/scripts/network-status.sh",
+    "return-type": "json",
+    "interval": 1,
+    "tooltip": true
+  },
+
+  "custom/bluetooth": {
+    "exec": "~/.config/waybar/scripts/bluetooth-status.sh",
+    "return-type": "json",
+    "interval": 5,
+    "on-click": "~/.config/waybar/scripts/open-bluetooth.sh",
+    "tooltip": true
+  },
+
+  "custom/gpu": {
+    "exec-if": "command -v nvidia-smi",
+    "exec": "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits | head -n1 | awk '{print \"󰢮 \" $1 \"%\"}'",
+    "interval": 2,
+    "format": "{}",
+    "tooltip": false
+  },
+
+  "cpu": {
+    "format": " {usage}%"
+  },
+
+  "memory": {
+    "format": " {}%"
+  },
+
+  "pulseaudio": {
+    "scroll-step": 5,
+    "format": "{icon} {volume}%",
+    "format-muted": "󰝟",
+    "format-bluetooth": "󰂯 {volume}%",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "󰋎",
+      "headset": "󰋎",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": [ "", "", "" ]
+    },
+    "on-click": "~/.config/waybar/scripts/open-audio.sh"
+  },
+
+  "tray": {
+    "spacing": 16
+  }
+}

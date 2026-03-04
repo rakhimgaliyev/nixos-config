@@ -1,0 +1,16 @@
+# Nix build results
+result
+result-*
+
+# direnv
+.direnv/
+.envrc
+
+# Nix flakes cache
+.nix-*
+
+# macOS
+.DS_Store
+
+# IDEs
+.idea/

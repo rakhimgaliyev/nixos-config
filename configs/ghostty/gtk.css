@@ -1,0 +1,61 @@
+/* Scale up Ghostty GTK UI: titlebar, tabs, popovers, menus, dialogs */
+headerbar,
+.titlebar {
+  min-height: 74px;
+}
+
+headerbar label,
+headerbar label.title,
+.titlebar label {
+  font-size: 1.58rem;
+  font-weight: 700;
+}
+
+tabbar tabbox tab {
+  min-height: 60px;
+  padding: 10px 20px;
+}
+
+tabbar tabbox tab label {
+  font-size: 1.46rem;
+  font-weight: 700;
+}
+
+popover,
+popover *,
+menu,
+menuitem,
+modelbutton,
+tooltip,
+tooltip *,
+dialog label,
+dialog button,
+button,
+entry,
+combobox,
+spinbutton {
+  font-size: 1.34rem;
+}
+
+entry placeholder {
+  font-size: 1.3rem;
+  opacity: 0.85;
+}
+
+/* Bigger GTK icons in header/menu/popovers/dialogs */
+image {
+  -gtk-icon-size: 1.3em;
+}
+
+headerbar image,
+.titlebar image {
+  -gtk-icon-size: 1.5em;
+}
+
+button image,
+modelbutton image,
+menuitem image,
+popover image,
+dialog image {
+  -gtk-icon-size: 1.4em;
+}

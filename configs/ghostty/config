@@ -1,0 +1,23 @@
+# System-wide Ghostty defaults
+gtk-titlebar = true
+gtk-titlebar-style = tabs
+gtk-wide-tabs = false
+gtk-toolbar-style = raised-border
+gtk-custom-css = /home/user/.config/ghostty/gtk.css
+window-theme = ghostty
+window-subtitle = false
+window-title-font-family = "Noto Sans"
+confirm-close-surface = false
+theme = Catppuccin Mocha
+font-family = "JetBrainsMono Nerd Font"
+font-family = "Noto Sans Mono"
+font-size = 24
+background-opacity = 0.9
+background-blur-radius = 24
+window-padding-x = 16
+window-padding-y = 16
+window-padding-balance = true
+split-divider-color = 45475A
+clipboard-paste-protection = false
+keybind = performable:ctrl+c=copy_to_clipboard
+keybind = ctrl+v=paste_from_clipboard

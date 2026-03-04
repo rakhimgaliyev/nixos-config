@@ -1,0 +1,12 @@
+show=drun
+prompt=Apps
+width=980
+height=640
+location=center
+allow_markup=true
+insensitive=true
+term=ghostty
+gtk_dark=true
+hide_scroll=true
+normal_window=false
+image_size=26
