@@ -72,6 +72,8 @@
     wl-clipboard
     blueman
     pavucontrol
+    pulseaudio
+    qpwgraph
   ];
 
   # Fonts (Waybar icons)
